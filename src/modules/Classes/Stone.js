@@ -1,13 +1,12 @@
+import { typeAmmount } from '../Const/const'
 export class Stone {
     constructor(cordX, cordY) {
         this.cordX = cordX;
         this.cordY = cordY;
-        this.typeAmmount = 7 // Проблема статика с вебпаком?
         this.type = this.randomiseType();
     }
-    
     randomiseType() {
-        const type = Math.floor(1 + Math.random() * (this.typeAmmount));
+        const type = Math.floor(1 + Math.random() * (typeAmmount));
         switch (type) {
             case 1:
                 return "crimson";

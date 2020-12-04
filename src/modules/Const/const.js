@@ -1,10 +1,7 @@
-// Размеры по ширине
-const fieldWidth = 8;
-
-// Размеры по высоте
-const fieldHeight = 8;
-
+// Размеры поля
+export const fieldWidth = 10;
+export const fieldHeight = 10;
 // Получение игрового поля из документа для последующей инициализации
-const playField = document.getElementsByClassName('play-field')[0];
-
-export {fieldWidth, fieldHeight, playField}
+export const playField = document.getElementsByClassName('play-field')[0];
+// Количество типов камней (при изменении нужно добавить соответствующие стили в scss и класс Stone)
+export const typeAmmount = 7;
