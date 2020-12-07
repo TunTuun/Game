@@ -20,8 +20,12 @@ body {
 }
 
 .play-field {
-  width: 700px;
-  height: 700px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  height: 95%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,7 +37,6 @@ body {
 }
 
 .play-field__cell {
-  width: 12.5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

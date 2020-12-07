@@ -1,64 +1,65 @@
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .game-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(196, 251, 255);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(196, 251, 255);
 }
 
 .play-field {
-    width: 700px;
-    height: 700px;
-    position: relative;
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: 95%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 2px gray;
+  background-color: pink;
+  &__cell {
     display: flex;
-    flex-wrap: wrap;
-    border: solid 2px gray;
-    background-color: pink;
-    &__cell {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #fff;
-        border: solid 1px gray;
-        box-sizing: border-box;
-    }
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: solid 1px gray;
+    box-sizing: border-box;
+  }
 }
 
 .stone {
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    &_color {
-        &_crimson {
-            background-color: crimson;
-        }
-        &_limegreen {
-            background-color: limegreen;
-        }
-        &_orange {
-            background-color: orange;
-        }
-        &_turquoise {
-            background-color: turquoise;
-        }
-        &_blue {
-            background-color: blue;
-        }
-        &_violet {
-            background-color: violet;
-        }
-        &_sienna {
-            background-color: sienna;
-        }
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  &_color {
+    &_crimson {
+      background-color: crimson;
     }
-    &_selected {
-        border: solid 3px black;
+    &_limegreen {
+      background-color: limegreen;
     }
+    &_orange {
+      background-color: orange;
+    }
+    &_turquoise {
+      background-color: turquoise;
+    }
+    &_blue {
+      background-color: blue;
+    }
+    &_violet {
+      background-color: violet;
+    }
+    &_sienna {
+      background-color: sienna;
+    }
+  }
+  &_selected {
+    border: solid 3px black;
+  }
 }
