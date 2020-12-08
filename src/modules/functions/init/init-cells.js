@@ -1,4 +1,4 @@
-export const initCells = function (playField, fieldWidth, fieldHeight) {
+export const initCells = (playField, fieldWidth, fieldHeight) => {
   const cellWidth = (100 / fieldWidth) + '%';
   let rowIndex = 1;
   let columnIndex = 1;

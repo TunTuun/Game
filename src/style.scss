@@ -26,6 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: #fff;
     border: solid 1px gray;
     box-sizing: border-box;
@@ -36,6 +37,8 @@ body {
   width: 90%;
   height: 90%;
   border-radius: 50%;
+  position: absolute;
+  z-index: 2;
   &_color {
     &_crimson {
       background-color: crimson;
@@ -60,6 +63,6 @@ body {
     }
   }
   &_selected {
-    border: solid 3px black;
+    border: solid 2px rgba(0, 0, 0, 0.8);
   }
 }

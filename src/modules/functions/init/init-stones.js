@@ -1,7 +1,7 @@
-import { Stone } from '../../classes/stone'
-import { moveStones } from '../move-stones'
+import { Stone } from '../../classes/stone';
+import { moveStones } from '../move-stones';
 
-export const initStones = function (fieldStorage) {
+export const initStones = (fieldStorage) => {
   const cellList = Array.from(document.getElementsByClassName('play-field__cell'));
   if (fieldStorage.fieldStorage.length) {
     fieldStorage.fieldStorage.length = 0;
@@ -15,6 +15,6 @@ export const initStones = function (fieldStorage) {
     const stone = document.createElement('div');
     stone.classList.add('stone', 'stone_color_' + stoneData.type);
     cell.append(stone);
-    stone.addEventListener( "click" , () => { moveStones(stoneData) });
+    stone.addEventListener("click", () => { moveStones(stoneData) });
   })
 }

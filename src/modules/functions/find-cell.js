@@ -1,4 +1,4 @@
-export const findCell = function (cordX, cordY) {
+export const findCell = (cordX, cordY) => {
   const cellList = Array.from(document.getElementsByClassName('play-field__cell'));
-  return cellList.find(element => (element.getAttribute('x') === cordX && element.getAttribute('y') === cordY))
+  return cellList.find(element => (element.getAttribute('x') === cordX && element.getAttribute('y') === cordY));
 }
