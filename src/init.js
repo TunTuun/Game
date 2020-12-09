@@ -12,4 +12,6 @@ initFieldSize();
 initCells(); // Инициализация игровых ячеек
 initStones(); // Заполнение / Перезаполнение поля и массива камнями
 
-stone.addEventListener('click', () => { moveStones(stoneData) }); // Переделать на делегировании
+// playField.addEventListener('click', () => {
+//   moveStones(stoneData)
+// }); // Переделать на делегировании камешков
