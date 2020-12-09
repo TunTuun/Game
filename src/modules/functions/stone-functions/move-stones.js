@@ -1,13 +1,14 @@
 import { isSwappable } from "./is-swappable";
 import { resetStones } from "./reset-stones";
-import { gameplayHandler } from "../const/const";
+import { gameplayHandler } from "../../const/const";
 import { swapStones } from './swap-stones';
-import { forbideActions } from './forbide-actions';
-import { findCell } from './find-cell';
+import { forbideActions } from '../forbide-actions';
+import { findCell } from '../find-cell';
 
 export const moveStones = (stone) => {
   if (stone.selected && stone === gameplayHandler.selectedStone) {
-    findCell(gameplayHandler.selectedStone.cordX, gameplayHandler.selectedStone.cordY).firstChild.classList.toggle('stone_selected');
+    findCell(gameplayHandler.selectedStone.cordX, gameplayHandler.selectedStone.cordY)
+    .firstChild.classList.toggle('stone_selected');
     stone.selected = false;
     gameplayHandler.isSelectedFlag = false;
     gameplayHandler.selectedStone = undefined;

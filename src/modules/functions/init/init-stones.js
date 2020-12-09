@@ -1,5 +1,5 @@
 import { Stone } from '../../classes/stone';
-import { moveStones } from '../move-stones';
+import { moveStones } from '../stone-functions/move-stones';
 
 export const initStones = (fieldStorage) => {
   const cellList = Array.from(document.getElementsByClassName('play-field__cell'));
