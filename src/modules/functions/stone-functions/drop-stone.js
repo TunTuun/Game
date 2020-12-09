@@ -1,4 +1,4 @@
-import { findCell } from "../find-cell";
+import { findCell } from '../find-cell';
 import { fieldStorage, fieldWidth } from '../../const/const';
 import { animationInit } from '../animation/animation-init';
 
@@ -8,6 +8,6 @@ export const dropStone = (stone) => {
   const moveIndex = fieldStorage.fieldStorage.findIndex(item => item === stone) + fieldWidth;
   fieldStorage.fieldStorage[moveIndex] = stone;
   stone.cordY = String(+(stone.cordY) + 1);
-  fieldStorage.fieldStorage[(fieldStorage.fieldStorage.findIndex(item => item === stone))] = undefined;
+  fieldStorage.fieldStorage[(fieldStorage.fieldStorage.findIndex(item => item === stone))] = null;
   animationInit(cell, dropCell, false);
 }

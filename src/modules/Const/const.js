@@ -4,7 +4,7 @@ import { FieldStorage } from '../classes/field-storage';
 export const fieldWidth = 8;
 export const fieldHeight = 8;
 // Получение игрового поля из документа для инициализации
-export const playField = document.getElementsByClassName('play-field')[0];
+export const playField = document.querySelector('.play-field');
 // Количество типов камней (при изменении нужно добавить соответствующие стили в scss и массив stoneColors)
 export const typeAmmount = 7;
 // Цвета камней
@@ -20,6 +20,6 @@ export const stoneColors = [
 // Игровой обработчик событий
 export const gameplayHandler = {
   isSelectedFlag: false,
-  selectedStone: undefined
+  selectedStone: null
 };
 export const fieldStorage = new FieldStorage(fieldWidth, fieldHeight);

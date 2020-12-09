@@ -1,21 +1,21 @@
-export const initCells = (playField, fieldWidth, fieldHeight) => {
-  const cellWidth = (100 / fieldWidth) + '%';
+import { createCell } from './create-cell';
+import {
+  fieldWidth,
+  fieldHeight,
+  playField
+} from '../../const/const';
+
+export const initCells = () => {
   let rowIndex = 1;
   let columnIndex = 1;
-  while (true) {
-    const cell = document.createElement('div');
-    cell.classList.add('play-field__cell');
-    cell.style.width = cellWidth;
+  for (let i = 0; i < fieldWidth * fieldHeight; i++) {
+    const cell = createCell();
     cell.setAttribute('x', rowIndex);
     cell.setAttribute('y', columnIndex);
     playField.append(cell);
     if (rowIndex === fieldWidth) {
-      if (columnIndex === fieldHeight) {
-        break;
-      } else {
-        rowIndex = 1;
-        columnIndex++;
-      }
+      rowIndex = 1;
+      columnIndex++;
     } else {
       rowIndex++;
     }

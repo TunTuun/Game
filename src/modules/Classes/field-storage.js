@@ -7,4 +7,7 @@ export class FieldStorage {
   addStone(stone) {
     this.fieldStorage.push(stone);
   }
+  // findStone(cordX, cordY) {
+  //   return this.fieldStorage.find(item => item.cordX === cordX && item.cordY === cordY);
+  // }
 }
