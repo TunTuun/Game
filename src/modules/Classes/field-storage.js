@@ -1,13 +1,13 @@
-export class FieldStorage {
+export class Field {
   constructor(fieldWidth, fieldHeight) {
-    this.fieldWidth = fieldWidth;
-    this.fieldHeight = fieldHeight;
-    this.fieldStorage = [];
+    this.width = fieldWidth;
+    this.height = fieldHeight;
+    this.storage = [];
   }
   addStone(stone) {
-    this.fieldStorage.push(stone);
+    this.storage.push(stone);
   }
-  // findStone(cordX, cordY) {
-  //   return this.fieldStorage.find(item => item.cordX === cordX && item.cordY === cordY);
-  // }
+  findStone(cordX, cordY) {
+    return this.storage.find(item => item.cordX === cordX && item.cordY === cordY);
+  }
 }
