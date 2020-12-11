@@ -8,6 +8,6 @@ export class Field {
     this.storage.push(stone);
   }
   findStone(cordX, cordY) {
-    return this.storage.find(item => item.cordX === cordX && item.cordY === cordY);
+    return this.storage.find(item => item.cordX == cordX && item.cordY == cordY);
   }
 }

@@ -7,7 +7,7 @@ export const fieldHeight = 5;
 // Получение игрового поля из документа для инициализации
 export const playField = document.querySelector('.play-field');
 // Количество типов камней (при изменении нужно добавить соответствующие стили в scss и массив stoneColors)
-export const typeAmmount = 7;
+export const typeAmmount = 3;
 // Цвета камней
 export const stoneColors = [
   'crimson',
