@@ -10,4 +10,7 @@ export class Field {
   findStone(cordX, cordY) {
     return this.storage.find(item => item.cordX == cordX && item.cordY == cordY);
   }
+  dropStone(cordX, cordY) {
+    this.findStone(cordX, cordY).cordY = String(+(this.findStone(cordX, cordY).cordY) + 1);
+  }
 }
