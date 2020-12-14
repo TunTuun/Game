@@ -39,7 +39,7 @@ export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondSto
           secondCell.append(firstCell.firstChild);
           secondCell.firstChild.style = '';
         }
-        forbideActions()
+        forbideActions();
       }
     })
 }

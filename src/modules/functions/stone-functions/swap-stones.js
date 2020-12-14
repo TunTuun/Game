@@ -1,7 +1,6 @@
 import { findCell } from '../find-cell';
 import { animationInit } from '../animation/animation-init';
 import { findConjuctions } from '../conjuction/find-conjuctions';
-import { findConjuctionsVertical } from '../conjuction/find-conjuctions-vertical';
 import { conjuctionStack } from '../../const/const';
 
 import { field } from '../../const/const';
@@ -10,28 +9,20 @@ export const swapStones = (firstStone, secondStone) => {
   const firstCell = findCell(firstStone.cordX, firstStone.cordY);
   const secondCell = findCell(secondStone.cordX, secondStone.cordY);
 
-  const swap = [firstStone.cordX, firstStone.cordY];
-  firstStone.cordX = secondStone.cordX;
-  firstStone.cordY = secondStone.cordY;
+  const swap = [firstStone.cordX, firstStone.cordY, secondStone.cordX, secondStone.cordY];
+  firstStone.cordX = swap[2];
+  firstStone.cordY = swap[3];
   secondStone.cordX = swap[0];
   secondStone.cordY = swap[1];
 
-  let returnStones = true;
-  // findConjuctions();
-  // findConjuctionsVertical();
-  // if (!conjuctionStack.storage.length === 0) {
-  //   console.log('Совпадения найдены!');
-  //   returnStones = false;
-  // } else {
-  //   returnStones = true;
-  // }
-  
+  findConjuctions();
+  const returnStones = conjuctionStack.storage.length === 0 ? true : false;
   if (returnStones) {
     animationInit(firstCell, secondCell, returnStones);
-    firstStone.cordX = secondStone.cordX;
-    firstStone.cordY = secondStone.cordY;
-    secondStone.cordX = swap[0];
-    secondStone.cordY = swap[1];
+    firstStone.cordX = swap[0];
+    firstStone.cordY = swap[1];
+    secondStone.cordX = swap[2];
+    secondStone.cordY = swap[3];
   } else {
     animationInit(firstCell, secondCell, returnStones);
   }

@@ -3,6 +3,6 @@ export class Conjuction {
     this.type = stoneType;
     this.size = lineSize;
     this.cords = cords;
-    horizontal === true ? this.direction = 'horizontal' : this.direction = 'vertical';
+    horizontal === 'horizontal' ? this.direction = 'horizontal' : this.direction = 'vertical';
   }
 }
