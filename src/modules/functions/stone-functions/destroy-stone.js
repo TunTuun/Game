@@ -1,9 +1,11 @@
 import { findCell } from '../find-cell'
-import { fieldStorage } from '../../const/const';
+import { field } from '../../const/const';
 
 export const destroyStone = (stone) => {
-  const cell = findCell(stone.cordX, stone.cordY);
-  let destroyIndex = fieldStorage.fieldStorage.findIndex(item => item === stone);
-  fieldStorage.fieldStorage[destroyIndex] = null;
-  cell.firstChild.remove();
+  if (stone) {
+    const cell = findCell(stone.cordX, stone.cordY);
+    let destroyIndex = field.storage.findIndex(item => item === stone);
+    field.storage.splice(destroyIndex, 1);
+    cell.firstChild.remove();
+  }
 }

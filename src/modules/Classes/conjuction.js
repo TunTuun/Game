@@ -1,8 +1,8 @@
 export class Conjuction {
-  constructor(stoneType, lineSize, cords, horizontal) {
+  constructor(stoneType, lineSize, cords, direction) {
     this.type = stoneType;
     this.size = lineSize;
     this.cords = cords;
-    horizontal === 'horizontal' ? this.direction = 'horizontal' : this.direction = 'vertical';
+    this.direction = direction === 'horizontal' ?  'horizontal' : 'vertical';
   }
 }

@@ -21,7 +21,8 @@ export const stoneColors = [
 // Игровой обработчик событий
 export const gameplayHandler = {
   isSelectedFlag: false,
-  selectedStone: null
+  selectedStone: null,
+  score: 0,
 };
 export const field = new Field(fieldWidth, fieldHeight);
 export const conjuctionStack = new ConjuctionStack(fieldWidth, fieldHeight);
