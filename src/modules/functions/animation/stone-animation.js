@@ -1,9 +1,13 @@
 import { forbideActions } from '../forbide-actions';
+import { destroyConjuctions } from '../conjuction/destroy-conjuctions';
+import { dropStones } from '../stone-functions/drop-stones';
+import { checkConjuctions } from '../conjuction/check-conjuctions';
+import { createStones } from '../stone-functions/create-stones';
 
 export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondStoneStyle, returnStones) => {
   const animate = new Promise((resolve) => {
     const start = Date.now();
-    const timer = setInterval(function () {
+    const timer = setInterval(function () { 
       const timePassed = Date.now() - start;
       firstCell.firstChild.style[firstStoneStyle] = 5 + (timePassed / 10) + '%';
       if (secondCell.firstChild)
@@ -25,21 +29,17 @@ export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondSto
             clearInterval(timer);
             firstCell.firstChild.style = '';
             secondCell.firstChild.style = '';
-            forbideActions();
           }
         }, 20);
       } else {
-        if (secondCell.firstChild) {
           secondCell.append(firstCell.firstChild);
           firstCell.append(secondCell.firstChild);
           firstCell.firstChild.style = '';
           secondCell.firstChild.style = '';
-        }
-        else {
-          secondCell.append(firstCell.firstChild);
-          secondCell.firstChild.style = '';
-        }
-        forbideActions();
+        destroyConjuctions();
+        dropStones();
+        createStones();
+        checkConjuctions();
       }
     })
 }

@@ -2,8 +2,7 @@ import { findCell } from '../find-cell';
 import { animationInit } from '../animation/animation-init';
 import { findConjuctions } from '../conjuction/find-conjuctions';
 import { conjuctionStack } from '../../const/const';
-
-import { field } from '../../const/const';
+import { checkConjuctions } from '../conjuction/check-conjuctions';
 
 export const swapStones = (firstStone, secondStone) => {
   const firstCell = findCell(firstStone.cordX, firstStone.cordY);

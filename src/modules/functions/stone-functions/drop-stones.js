@@ -1,30 +1,27 @@
 import { field, fieldHeight, fieldWidth } from '../../const/const';
-import { dropAnimation } from '../animation/drop-animation';
+import { findCell } from '../find-cell';
 
 export const dropStones = () => {
-  // let dropIndex = fieldHeight - 1;
-  // const columnCheck = (columnIndex, dropIndex) => { 
-  //   console.log(dropIndex)
-  //   if (dropIndex > 1) {
-  //     if (field.findStone(columnIndex, dropIndex + 1)) {
-  //       console.log('Камень под низом есть, двигаемся вверх');
-  //       columnCheck(columnIndex, dropIndex - 1);
-  //     } else {
-  //       if (field.findStone(columnIndex, dropIndex)) {
-  //         console.log('Существует, роняем');
-  //         field.dropStone(columnIndex, dropIndex);
-  //         dropAnimation(columnIndex, dropIndex);
-  //         console.log('Вызываем функцию прохода еще раз');
-  //         columnCheck(columnIndex, fieldHeight - 1);
-  //       } else {
-  //         console.log('Пустота, нужно искать и ронять верхний');
-  //         columnCheck(columnIndex, dropindex--);
-  //       }
-  //     }
-  //   } 
-  // }
-  // for (let columnIndex = 1; columnIndex <= fieldWidth; columnIndex++) {
-  //   columnCheck(columnIndex, dropIndex);
-  //   console.log('columnIndex: ', columnIndex);
-  // }
+  const checkColumn = (columnIndex, rowIndex) => {
+    while (rowIndex >= 1) {
+      if (field.findStone(columnIndex, rowIndex)) {
+        if (field.findStone(columnIndex, rowIndex + 1)) {
+          rowIndex--;
+        } else {
+          const currentStone = field.findStone(columnIndex, rowIndex);
+          const currentCell = findCell(currentStone.cordX, currentStone.cordY);
+          const dropCell = findCell(currentStone.cordX, String(+currentStone.cordY + 1));
+          dropCell.append(currentCell.firstChild);
+          currentStone.cordY = String(+currentStone.cordY + 1);
+          rowIndex = 4;
+        }
+      } else {
+        rowIndex--;
+      }
+    }
+  }
+  let rowIndex = fieldHeight - 1;
+  for (let columnIndex = 1; columnIndex <= fieldWidth; columnIndex++) {
+    checkColumn(columnIndex, rowIndex);
+  }
 }

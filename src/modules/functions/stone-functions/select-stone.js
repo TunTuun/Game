@@ -16,7 +16,6 @@ export const selectStone = (stone) => {
   } else {
     if (gameplayHandler.isSelectedFlag) {
       if (isSwappable(gameplayHandler.selectedStone, stone)) {
-        forbideActions();
         findCell(gameplayHandler.selectedStone.cordX, gameplayHandler.selectedStone.cordY).firstChild.classList.toggle('stone_selected');
         swapStones(gameplayHandler.selectedStone, stone);
         resetStones(stone);
