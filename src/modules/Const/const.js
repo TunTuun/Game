@@ -1,14 +1,11 @@
 import { ConjuctionStack } from '../classes/conjuction-stack';
 import { Field } from '../classes/field-storage';
 
-// Размеры поля
-export const fieldWidth = 5;
-export const fieldHeight = 5;
-// Получение игрового поля из документа для инициализации
+export const fieldWidth = 7;
+export const fieldHeight = 7;
 export const playField = document.querySelector('.play-field');
-// Количество типов камней (при изменении нужно добавить соответствующие стили в scss и массив stoneColors)
+export const scoreCounter = document.querySelector('score');
 export const typeAmmount = 7;
-// Цвета камней
 export const stoneColors = [
   'crimson',
   'limegreen',
@@ -18,7 +15,6 @@ export const stoneColors = [
   'violet',
   'sienna',
 ];
-// Игровой обработчик событий
 export const gameplayHandler = {
   isSelectedFlag: false,
   selectedStone: null,

@@ -1,4 +1,4 @@
-import { forbideActions } from '../forbide-actions';
+import { unlockField } from '../unlock-field';
 import { destroyConjuctions } from '../conjuction/destroy-conjuctions';
 import { dropStones } from '../stone-functions/drop-stones';
 import { checkConjuctions } from '../conjuction/check-conjuctions';
@@ -29,6 +29,8 @@ export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondSto
             clearInterval(timer);
             firstCell.firstChild.style = '';
             secondCell.firstChild.style = '';
+            console.log("Конец анимации, разблокирую поле")
+            unlockField();
           }
         }, 20);
       } else {

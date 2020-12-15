@@ -8,9 +8,15 @@ body {
   height: 100%;
   position: absolute;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(196, 251, 255);
+}
+
+.score {
+  width: 100%;
+  text-align: center;
 }
 
 .play-field {

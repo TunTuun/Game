@@ -13,7 +13,7 @@ export const dropStones = () => {
           const dropCell = findCell(currentStone.cordX, String(+currentStone.cordY + 1));
           dropCell.append(currentCell.firstChild);
           currentStone.cordY = String(+currentStone.cordY + 1);
-          rowIndex = 4;
+          rowIndex = fieldHeight - 1;
         }
       } else {
         rowIndex--;
