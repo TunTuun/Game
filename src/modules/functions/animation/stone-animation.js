@@ -29,7 +29,6 @@ export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondSto
             clearInterval(timer);
             firstCell.firstChild.style = '';
             secondCell.firstChild.style = '';
-            console.log("Конец анимации, разблокирую поле")
             unlockField();
           }
         }, 20);

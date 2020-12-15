@@ -9,14 +9,22 @@
 </head>
 
 <body>
-  <div class="game-wrapper">
-    <div class="score">
-      <span class="score__text"></span>
-      <span class="score__value"></span>
+  <div class="container">
+    <div class="game-wrapper">
+      <div class="interface">
+        <div class="record">
+          <span class="record__text">Record: </span>
+          <span class="record__value"></span>
+        </div>
+        <div class="score">
+          <span class="score__text">Score: </span>
+          <span class="score__value">0</span>
+        </div>
+        <button class="reset"></button>
+      </div>
+      <div class="play-field"></div>
     </div>
-    <div class="play-field"></div>
   </div>
 </body>
 <script type="module" src="../dist/bundle.js"></script>
-
 </html>

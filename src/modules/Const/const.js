@@ -4,7 +4,6 @@ import { Field } from '../classes/field-storage';
 export const fieldWidth = 7;
 export const fieldHeight = 7;
 export const playField = document.querySelector('.play-field');
-export const scoreCounter = document.querySelector('score');
 export const typeAmmount = 7;
 export const stoneColors = [
   'crimson',

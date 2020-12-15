@@ -1,28 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-.game-wrapper {
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.container {
   width: 100%;
   height: 100%;
   position: absolute;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(196, 251, 255);
 }
 
-.score {
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.interface {
   width: 100%;
+  margin: 15px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.record {
+  position: absolute;
+  left: 5px;
+  font-size: 2rem;
+}
+
+.score {
   text-align: center;
+  font-size: 2rem;
+}
+
+.reset {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 5px;
+  background-image: url('./img/reset.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .play-field {
   flex-grow: 0;
   flex-shrink: 1;
-  height: 95%;
+  height: 85%;
   position: relative;
   display: flex;
   flex-wrap: wrap;
