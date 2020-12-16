@@ -10,4 +10,4 @@ initCells();
 lockField();
 initStones();
 unlockField();
-checkConjuctions();
+checkConjuctions(true);

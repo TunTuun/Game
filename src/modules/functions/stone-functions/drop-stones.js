@@ -34,7 +34,7 @@ export const dropStones = () => {
       }
     }
   }
-  let rowIndex = fieldHeight - 1;
+  const rowIndex = fieldHeight - 1;
   for (let columnIndex = 1; columnIndex <= fieldWidth; columnIndex++) {
     checkColumn(columnIndex, rowIndex);
   }

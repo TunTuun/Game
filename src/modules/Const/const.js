@@ -21,3 +21,8 @@ export const gameplayHandler = {
 };
 export const field = new Field(fieldWidth, fieldHeight);
 export const conjuctionStack = new ConjuctionStack(fieldWidth, fieldHeight);
+
+const destroySound = new Audio();
+destroySound.src = './audio/pop.mp3';
+destroySound.volume = 0.25;
+export { destroySound };
