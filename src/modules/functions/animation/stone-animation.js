@@ -18,8 +18,8 @@ export const stoneAnimation = (firstCell, secondCell, firstStoneStyle, secondSto
       }
     }, 20);
   })
-    .then((resolve) => {
-      if (returnStones) { // Обработчик, если метод проходки не вернул совпадений (returnStones = true)
+    .then(() => {
+      if (returnStones) {
         const start = Date.now();
         const timer = setInterval(function () {
           const timePassed = Date.now() - start;

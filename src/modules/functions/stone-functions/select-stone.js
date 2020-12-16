@@ -2,7 +2,6 @@ import { isSwappable } from './is-swappable';
 import { resetStones } from './reset-stones';
 import { gameplayHandler } from '../../const/const';
 import { swapStones } from './swap-stones';
-import { forbideActions } from '../lock-field';
 import { findCell } from '../find-cell';
 import { firstStoneSelector } from './first-stone-selector';
 

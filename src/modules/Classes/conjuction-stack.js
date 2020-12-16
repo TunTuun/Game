@@ -1,5 +1,3 @@
-import { field } from '../const/const';
-
 export class ConjuctionStack {
   constructor(fieldWidth, fieldHeight) {
     this.columnAmmount = fieldWidth;

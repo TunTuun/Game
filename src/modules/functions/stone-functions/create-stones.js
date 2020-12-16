@@ -1,6 +1,6 @@
 import { field, fieldHeight, fieldWidth } from '../../const/const';
 import { findCell } from '../find-cell';
-import { Stone } from '../../classes/Stone';
+import { Stone } from '../../classes/stone';
 
 export const createStones = () => {
   for (let y = 1; y <= fieldHeight; y++) {

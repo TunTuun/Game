@@ -20,7 +20,7 @@ export const initField = () => {
       selectStone(stoneData);
     }
   });
-  
+
   document.querySelector('.game-wrapper').addEventListener('click', (event) => {
     initAudio();
   }, { once: true });

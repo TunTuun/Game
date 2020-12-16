@@ -1,7 +1,6 @@
 import { field, fieldWidth, fieldHeight } from '../../const/const';
 import { conjuctionStack } from '../../const/const';
 import { Conjuction } from '../../classes/conjuction';
-import { destroyConjuctions } from '../conjuction/destroy-conjuctions';
 
 export const findConjuctions = () => {
   let columnIndex = 1;
